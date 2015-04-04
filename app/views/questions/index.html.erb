@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Q1</th>
+      <th>Q1a</th>
+      <th>Q1b</th>
+      <th>Q1c</th>
+      <th>Q1d</th>
+      <th>Q1correct</th>
+      <th>Q2</th>
+      <th>Q2a</th>
+      <th>Q2b</th>
+      <th>Q2c</th>
+      <th>Q2d</th>
+      <th>Q2correct</th>
+      <th>Q3</th>
+      <th>Q3a</th>
+      <th>Q3b</th>
+      <th>Q3c</th>
+      <th>Q3d</th>
+      <th>Q3correct</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.q1 %></td>
+        <td><%= question.q1a %></td>
+        <td><%= question.q1b %></td>
+        <td><%= question.q1c %></td>
+        <td><%= question.q1d %></td>
+        <td><%= question.q1correct %></td>
+        <td><%= question.q2 %></td>
+        <td><%= question.q2a %></td>
+        <td><%= question.q2b %></td>
+        <td><%= question.q2c %></td>
+        <td><%= question.q2d %></td>
+        <td><%= question.q2correct %></td>
+        <td><%= question.q3 %></td>
+        <td><%= question.q3a %></td>
+        <td><%= question.q3b %></td>
+        <td><%= question.q3c %></td>
+        <td><%= question.q3d %></td>
+        <td><%= question.q3correct %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

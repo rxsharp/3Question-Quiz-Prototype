@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q1: MyString
+  q1a: MyString
+  q1b: MyString
+  q1c: MyString
+  q1d: MyString
+  q1correct: MyString
+  q2: MyString
+  q2a: MyString
+  q2b: MyString
+  q2c: MyString
+  q2d: MyString
+  q2correct: MyString
+  q3: MyString
+  q3a: MyString
+  q3b: MyString
+  q3c: MyString
+  q3d: MyString
+  q3correct: MyString
+
+two:
+  q1: MyString
+  q1a: MyString
+  q1b: MyString
+  q1c: MyString
+  q1d: MyString
+  q1correct: MyString
+  q2: MyString
+  q2a: MyString
+  q2b: MyString
+  q2c: MyString
+  q2d: MyString
+  q2correct: MyString
+  q3: MyString
+  q3a: MyString
+  q3b: MyString
+  q3c: MyString
+  q3d: MyString
+  q3correct: MyString

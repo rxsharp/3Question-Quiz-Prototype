@@ -1,0 +1,89 @@
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% @question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :q1 %><br>
+    <%= f.text_field :q1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q1a %><br>
+    <%= f.text_field :q1a %>
+  </div>
+  <div class="field">
+    <%= f.label :q1b %><br>
+    <%= f.text_field :q1b %>
+  </div>
+  <div class="field">
+    <%= f.label :q1c %><br>
+    <%= f.text_field :q1c %>
+  </div>
+  <div class="field">
+    <%= f.label :q1d %><br>
+    <%= f.text_field :q1d %>
+  </div>
+  <div class="field">
+    <%= f.label :q1correct %><br>
+    <%= f.text_field :q1correct %>
+  </div>
+  <div class="field">
+    <%= f.label :q2 %><br>
+    <%= f.text_field :q2 %>
+  </div>
+  <div class="field">
+    <%= f.label :q2a %><br>
+    <%= f.text_field :q2a %>
+  </div>
+  <div class="field">
+    <%= f.label :q2b %><br>
+    <%= f.text_field :q2b %>
+  </div>
+  <div class="field">
+    <%= f.label :q2c %><br>
+    <%= f.text_field :q2c %>
+  </div>
+  <div class="field">
+    <%= f.label :q2d %><br>
+    <%= f.text_field :q2d %>
+  </div>
+  <div class="field">
+    <%= f.label :q2correct %><br>
+    <%= f.text_field :q2correct %>
+  </div>
+  <div class="field">
+    <%= f.label :q3 %><br>
+    <%= f.text_field :q3 %>
+  </div>
+  <div class="field">
+    <%= f.label :q3a %><br>
+    <%= f.text_field :q3a %>
+  </div>
+  <div class="field">
+    <%= f.label :q3b %><br>
+    <%= f.text_field :q3b %>
+  </div>
+  <div class="field">
+    <%= f.label :q3c %><br>
+    <%= f.text_field :q3c %>
+  </div>
+  <div class="field">
+    <%= f.label :q3d %><br>
+    <%= f.text_field :q3d %>
+  </div>
+  <div class="field">
+    <%= f.label :q3correct %><br>
+    <%= f.text_field :q3correct %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
