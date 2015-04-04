@@ -17,5 +17,14 @@ q3a: "Kobe Bryant", q3b: "Shannon Brown", q3c: "Derek Fisher", q3d: "Rick Fox", 
 )
 
 
+rails g scaffold Grill ans1 ans2 ans3 question:references
 
-rails g scaffold Grill ans1 ans2 ans3
+Add route to combine the two
+  resources :questions do
+  resources :grills
+  end
+Link to questions show page 
+<%= link_to "Try it out", new_question_grill_path(@question), class: "btn btn-default btn-lg" %></br></br>
+
+On question.rb
+has_many :grills, dependent: :destroy

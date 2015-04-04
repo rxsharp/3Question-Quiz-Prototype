@@ -1,0 +1,42 @@
+<%= form_for(@grill) do |f| %>
+  <% if @grill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grill.errors.count, "error") %> prohibited this grill from being saved:</h2>
+
+      <ul>
+      <% @grill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+<%= @question.q1 %><br>
+<%= f.label :ans1 %><br>
+<%= f.radio_button :ans1, "a" %><%= @question.q1a %><br>
+<%= f.radio_button :ans1, "b" %><%= @question.q1b %><br>
+<%= f.radio_button :ans1, "c" %><%= @question.q1c %><br>
+<%= f.radio_button :ans1, "d" %><%= @question.q1d %><br>
+  </div>
+  <div class="field">
+<%= @question.q2 %><br>
+<%= f.label :ans2 %><br>
+<%= f.radio_button :ans2, "a" %><%= @question.q2a %><br>
+<%= f.radio_button :ans2, "b" %><%= @question.q2b %><br>
+<%= f.radio_button :ans2, "c" %><%= @question.q2c %><br>
+<%= f.radio_button :ans2, "d" %><%= @question.q2d %><br>
+  </div>
+  <div class="field">
+<%= @question.q3 %><br>
+    <%= f.label :ans3 %><br>
+<%= f.radio_button :ans3, "a" %><%= @question.q3a %><br>
+<%= f.radio_button :ans3, "b" %><%= @question.q3b %><br>
+<%= f.radio_button :ans3, "c" %><%= @question.q3c %><br>
+<%= f.radio_button :ans3, "d" %><%= @question.q3d %><br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

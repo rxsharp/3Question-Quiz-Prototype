@@ -69,6 +69,9 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:q1, :q1a, :q1b, :q1c, :q1d, :q1correct, :q2, :q2a, :q2b, :q2c, :q2d, :q2correct, :q3, :q3a, :q3b, :q3c, :q3d, :q3correct)
+      params.require(:question).permit(:q1, :q1a, :q1b, :q1c, :q1d, :q1correct, 
+      :q2, :q2a, :q2b, :q2c, :q2d, :q2correct, 
+      :q3, :q3a, :q3b, :q3c, :q3d, :q3correct, 
+      :grill_attributes => [ :id, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6, :ans7, :ans8, :ans9, :ans10 ])
     end
 end

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404075204) do
+ActiveRecord::Schema.define(version: 20150404083320) do
+
+  create_table "grills", force: :cascade do |t|
+    t.string   "ans1"
+    t.string   "ans2"
+    t.string   "ans3"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "grills", ["question_id"], name: "index_grills_on_question_id"
 
   create_table "questions", force: :cascade do |t|
     t.string   "q1"
