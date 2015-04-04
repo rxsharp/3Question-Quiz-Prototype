@@ -9,7 +9,8 @@ class GrillsController < ApplicationController
   # GET /grills/1
   # GET /grills/1.json
   def show
-    @question = Question.find(params[:question_id])
+    @grill = Grill.find(params[:id])
+    @question = Grill.find(params[:id])
     @score = 0
     
     if :q1correct == :ans1
@@ -79,7 +80,7 @@ class GrillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def grill_params
-      params.require(:grill).permit(:ans1, :ans2, :ans3, :question_id)
+      params.require(:grill).permit(:ans1, :ans2, :ans3, :question_id, :grill_id)
     end
 
 end

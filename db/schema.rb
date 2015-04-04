@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404083320) do
+ActiveRecord::Schema.define(version: 20150404130313) do
 
   create_table "grills", force: :cascade do |t|
     t.string   "ans1"
@@ -46,5 +46,14 @@ ActiveRecord::Schema.define(version: 20150404083320) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "score"
+    t.integer  "grill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "results", ["grill_id"], name: "index_results_on_grill_id"
 
 end
