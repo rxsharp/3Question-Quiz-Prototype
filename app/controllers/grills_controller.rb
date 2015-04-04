@@ -9,6 +9,14 @@ class GrillsController < ApplicationController
   # GET /grills/1
   # GET /grills/1.json
   def show
+    @question = Question.find(params[:question_id])
+    @score = 0
+    
+    if :q1correct == :ans1
+      @score += 1
+    else
+      @wrongone = "Wrong"
+    end
   end
 
   # GET /grills/new
