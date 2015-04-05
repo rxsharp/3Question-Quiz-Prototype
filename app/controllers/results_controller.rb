@@ -17,7 +17,34 @@ class ResultsController < ApplicationController
     @result = Result.new
     @question = Question.find(params[:question_id])
     @grill = Grill.find(params[:grill_id])
-
+    @score = 0
+    @q1 = @question.q1correct
+    @a1 = @grill.ans1
+    @q2 = @question.q2correct
+    @a2 = @grill.ans2    
+    @q3 = @question.q3correct
+    @a3 = @grill.ans3
+    if @a1 == @q1
+      @score += 1
+    end
+    if @a2 == @q2
+      @score += 1
+    end
+    if @a3 == @q3
+      @score += 1
+    end
+    if @score == 3
+      @message = "Awesome! 3/3"
+    end
+    if @score == 2
+      @message = "Not bad 2/3"
+    end
+    if @score == 1
+      @message = "Try harder 1/3"
+    end
+    if @score == 0
+      @message = "No correct answers 0/3"
+    end
   end
 
   # GET /results/1/edit
