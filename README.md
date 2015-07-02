@@ -1,3 +1,4 @@
+#App Notes/Directions
 Add Question mvc via scaffold
 rails g scaffold Question q1 q1a q1b q1c q1d q1correct q2 q2a q2b q2c q2d q2correct q3 q3a q3b q3c q3d q3correct
 
