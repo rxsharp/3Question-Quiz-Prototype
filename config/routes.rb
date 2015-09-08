@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'questions#index'
+  root 'welcome#index'
+
+  # root 'questions#index'
   resources :results
 
   resources :grills
