@@ -1,6 +1,23 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.create-button {
+    width: 250px;
+    padding: 24px;
+
+}
+
+.button-position form {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 100;
+}
+.create-button {
+    color: black;
+    background: white;
+    display: inline-block;
+}
 
 .main-welcome {
 display: flex;
@@ -9,6 +26,7 @@ display: flex;
     // padding: 20em;
     // height: 500px;
     // margin: 0px auto;
+
 }
 
 .outer {
@@ -26,5 +44,10 @@ display: flex;
 .inner {
     margin-left: auto;
     margin-right: auto; 
-    width: 500px;
+        width: 600px;
+        height: 300px;
+    background:blue;
+    display: flex;
+      justify-content: center;
+
 }
